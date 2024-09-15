@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+
+// Function prototype
+void strip_chars(char *str, const char *remove_chars);
+
 int main() {
     char str[] = "Carnegie Mellon";
     char remove_chars[] = "l ";
