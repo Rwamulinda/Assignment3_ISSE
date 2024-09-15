@@ -48,7 +48,7 @@ int main() {
     int pos = remove_last_substr(str, substr);
     
     if (pos != -1) {
-        printf("Modified string after removing last '%s': %s\n", substr, str);
+        printf("the updated  string after removing last '%s': %s\n", substr, str);
     } else {
         printf("Substring '%s' not found.\n", substr);
     }
