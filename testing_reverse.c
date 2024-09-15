@@ -5,17 +5,17 @@
 // Function to reverse a string and turn it into lower case
 void reverse_string(char *str) {
     int length_of_string = strlen(str);
-    int left_side = 0, right = length_of_string - 1;
+    int left_side = 0, right_side = length_of_string - 1;
     
-    while (left_side < right) {
+    while (left_side < right_side) {
         char temp = tolower(str[left_side]);
-        str[left_side] = tolower(str[right]);
-        str[right] = temp;
+        str[left_side] = tolower(str[right_side]);
+        str[right_side] = temp;
         left_side++;
-        right--;
+        right_side--;
     }
     
-    if (left_side == right) {
+    if (left_side == right_side) {
         str[left_side] = tolower(str[left_side]);
     }
 }
