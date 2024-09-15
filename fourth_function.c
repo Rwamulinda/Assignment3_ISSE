@@ -2,6 +2,26 @@
 #include <string.h>
 #include <stdbool.h>
 
+
+int main() {
+    char str[] = "one two one three";
+    char substr[] = "one ";
+    
+    printf("Original string: %s\n", str);
+    int pos = remove_last_substr(str, substr);
+    
+    if (pos != -1) {
+        printf("the updated  string after removing last '%s': %s\n", substr, str);
+    } else {
+        printf("Substring '%s' not found.\n", substr);
+    }
+    
+    return 0;
+}
+
+
+
+
 // Function to check if a string starts with a given prefix
 bool is_prefix(const char *prefix, const char *str) {
     while (*prefix && *str) {
@@ -40,18 +60,3 @@ int remove_last_substr(char *str, const char *substr) {
     return last_pos;
 }
 
-int main() {
-    char str[] = "one two one three";
-    char substr[] = "one ";
-    
-    printf("Original string: %s\n", str);
-    int pos = remove_last_substr(str, substr);
-    
-    if (pos != -1) {
-        printf("the updated  string after removing last '%s': %s\n", substr, str);
-    } else {
-        printf("Substring '%s' not found.\n", substr);
-    }
-    
-    return 0;
-}

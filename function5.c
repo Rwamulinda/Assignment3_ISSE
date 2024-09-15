@@ -1,6 +1,18 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+int main() {
+    char str[] = "Carnegie Mellon";
+    char remove_chars[] = "l ";
+    
+    printf("Original string: %s\n", str);
+    strip_chars(str, remove_chars);
+    printf("String after removing l in the string '%s': %s\n", remove_chars, str);
+    
+    return 0;
+}
+
+
 // Function to strip specific characters from a string
 void strip_chars(char *str, const char *remove_chars) {
     int write_pos = 0;
@@ -25,13 +37,3 @@ void strip_chars(char *str, const char *remove_chars) {
     str[write_pos] = '\0';
 }
 
-int main() {
-    char str[] = "Carnegie Mellon";
-    char remove_chars[] = "l ";
-    
-    printf("Original string: %s\n", str);
-    strip_chars(str, remove_chars);
-    printf("String after removing l in the string '%s': %s\n", remove_chars, str);
-    
-    return 0;
-}

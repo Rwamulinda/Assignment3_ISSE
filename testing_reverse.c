@@ -2,6 +2,17 @@
 #include <string.h>
 #include <ctype.h>  //for allowing us string manipulation specifically for lower case part
 
+int main() {
+    char str[] = "Carnegie Mellon";
+    
+    printf("our orginal string: %s\n", str);
+    reverse_string(str);
+    printf("Reversed and lower case version of the orginal string: %s\n", str);
+    printf("test passed");
+    
+    return 0;
+}
+
 // Function to reverse a string and turn it into lower case
 void reverse_string(char *str) {
     int length_of_string = strlen(str); 
@@ -20,13 +31,3 @@ void reverse_string(char *str) {
     }
 }
 
-int main() {
-    char str[] = "Carnegie Mellon";
-    
-    printf("our orginal string: %s\n", str);
-    reverse_string(str);
-    printf("Reversed and lower case version of the orginal string: %s\n", str);
-    printf("test passed");
-    
-    return 0;
-}
